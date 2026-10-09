@@ -1,8 +1,8 @@
 name: VPN Gate Node Check
 
 on:
-  workflow_dispatch:手动defaults:
-    
+  workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
@@ -32,7 +32,7 @@ jobs:
         run: python vpngate.py
         env:
           # 已部署的检测 Worker (不要改动: 检测统一走这里)
-          CHECK_WORKER: ${{ secrets.DOMAIN }}
+          CHECK_WORKER: "https://你的域名/check?sstp=vpn:vpn@"
           CHECK_CONCURRENCY: "32"
           CHECK_TIMEOUT: "90"
 
