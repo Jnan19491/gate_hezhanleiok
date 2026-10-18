@@ -2,7 +2,7 @@ name: VPN Gate Node Check
 
 on:
   schedule:
-    - cron: "30 21 * * *"
+    - cron: "30 19 * * *"
   # 保留手动触发，方便调试
   workflow_dispatch:
   
